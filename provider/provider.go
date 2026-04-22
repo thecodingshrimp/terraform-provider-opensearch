@@ -238,6 +238,7 @@ func Provider() *schema.Provider {
 			"opensearch_ism_policy":                resourceOpenSearchISMPolicy(),
 			"opensearch_dashboard_tenant":          resourceOpenSearchDashboardTenant(),
 			"opensearch_monitor":                   resourceOpenSearchMonitor(),
+			"opensearch_detector":                  resourceOpenSearchDetector(),
 			"opensearch_role":                      resourceOpenSearchRole(),
 			"opensearch_roles_mapping":             resourceOpenSearchRolesMapping(),
 			"opensearch_user":                      resourceOpenSearchUser(),
@@ -252,6 +253,7 @@ func Provider() *schema.Provider {
 		DataSourcesMap: map[string]*schema.Resource{
 			"opensearch_host":             dataSourceOpensearchHost(),
 			"opensearch_correlation_rule": dataSourceOpensearchCorrelationRule(),
+			"opensearch_detector":         dataSourceOpensearchDetector(),
 		},
 
 		ConfigureContextFunc: providerConfigure,
