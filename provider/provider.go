@@ -255,6 +255,7 @@ func Provider() *schema.Provider {
 			"opensearch_host":             dataSourceOpensearchHost(),
 			"opensearch_correlation_rule": dataSourceOpensearchCorrelationRule(),
 			"opensearch_detector":         dataSourceOpensearchDetector(),
+			"opensearch_rule":             dataSourceOpensearchRule(),
 		},
 
 		ConfigureContextFunc: providerConfigure,
